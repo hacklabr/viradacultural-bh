@@ -185,8 +185,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
-                            <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
-                            <span class="v">V</span>irada Cultur<span class="v">a</span>l
+                            <?php html::image("logo-mobile.svg", "Virada Cultural") ?>
                         </a>
                         <?php if($paginaprogramacao == 'programacao'): ?>
                             <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target="#programacao-navbar">
