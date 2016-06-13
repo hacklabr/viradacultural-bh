@@ -1,6 +1,16 @@
 <?php
-define('API_URL', "http://spcultura.prefeitura.sp.gov.br/api/");
-define('PROJECT_ID', 4);
-define('AGENT_IDS', '432,433,434');
-define('REPLACE_IMAGES_URL_FROM', 'http://spcultura.prefeitura.sp.gov.br//files/');
-define('REPLACE_IMAGES_URL_TO', 'http://viradacultural.prefeitura.sp.gov.br/imagens/');
+
+define('MAPAS_URL', "http://mapas.domain/");
+
+define('API_PUBLIC_KEY', '');
+define('API_PRIVATE_KEY', '');
+
+define('REPLACE_IMAGES_URL_FROM', 'http://mapas.domain/files/');
+define('REPLACE_IMAGES_URL_TO', 'http://mapas.domain/files/');
+
+define('PROJECT_ID', 1851);
+define('DATE_FROM', '2016-06-09');
+define('DATE_TO', '2016-06-10');
+
+define('SDK_DEBUG_REQUEST', true);
+define('SDK_DEBUG_RESPONSE', false);
