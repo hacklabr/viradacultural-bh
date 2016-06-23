@@ -1,8 +1,16 @@
+# BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /viradacultural/
+RewriteBase /
 RewriteRule ^index\.php$ - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /viradacultural/index.php [L]
+RewriteRule ^(wp-content/uploads/.*) http://viradaculturalbh.com.br/2016/$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 </IfModule>
+# END WordPress
+php_flag opcache.enable Off
