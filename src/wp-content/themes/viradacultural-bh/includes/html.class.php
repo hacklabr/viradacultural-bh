@@ -47,7 +47,7 @@ class html {
      * @param string $filename
      * @param string $alt
      */
-    static function image($filename, $alt) {
+    static function image($filename, $alt='') {
         $html_attributes = array();
         $complement = null;
         for ($i = 2; $i < func_num_args(); $i++) {

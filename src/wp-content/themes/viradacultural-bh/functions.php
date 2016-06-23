@@ -60,6 +60,10 @@ function viradacultural_addJS() {
 
     $facebookAppId = virada_get_facebook_app_id();
 
+    $evt_file = realpath(__DIR__.'/app/events.json');
+    $spc_file = realpath(__DIR__.'/app/spaces.json');
+    $ord_file = realpath(__DIR__.'/app/spaces-order.json');
+
     wp_localize_script('jquery', 'GlobalConfiguration', array(
         'baseURL' =>        get_bloginfo("url"),
         'templateURL' =>    get_bloginfo("template_url"),
@@ -67,9 +71,9 @@ function viradacultural_addJS() {
         'ajaxurl' =>        admin_url('admin-ajax.php'),
         'facebookAppId' =>  $facebookAppId,
         'md5' => array(
-            'events' => md5_file(realpath(__DIR__.'/app/events.json')),
-            'spaces' => md5_file(realpath(__DIR__.'/app/spaces.json')),
-            'spaces-order' => md5_file(realpath(__DIR__.'/app/spaces-order.json')),
+            'events' => $evt_file ? md5_file($evt_file) : '',
+            'spaces' => $spc_file ? md5_file($spc_file) : '',
+            'spaces-order' => $ord_file ? md5_file($ord_file) : '',
         ),
         'startDate' => '2016-07-09',
         'startTime' => '17:00',

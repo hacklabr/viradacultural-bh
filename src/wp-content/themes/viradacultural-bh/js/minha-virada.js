@@ -1,5 +1,5 @@
 minhaVirada = {
-    baseApiUrl: 'http://viradacultural.prefeitura.sp.gov.br/2015/api/',
+    baseApiUrl: 'http://api.viradaculturalbh.com.br/api/minhavirada/',
 //    baseApiUrl: 'http://192.168.0.70:8000/',
 
     uid: false,
