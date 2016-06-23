@@ -88,7 +88,6 @@ app.controller('main', function($scope, $rootScope, $window, $sce, $analytics){
             xfbml      : true,
             version    : 'v2.3'
           });
-
         // ao carregar a pagina vemos se o usuario ja esta conectado e com o app autorizado.
         // se nao estiver, não fazemos nada. Só vamos fazer alguma coisa se ele clicar
         FB.getLoginStatus(function(response) {

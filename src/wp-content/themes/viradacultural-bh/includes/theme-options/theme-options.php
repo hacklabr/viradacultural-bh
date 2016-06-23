@@ -91,8 +91,6 @@ function theme_options_page_callback_function() {
                 <h3>Redes Sociais</h3>
                 <p>Insira os links (com http) para as páginas da Virada nas Redes Sociais</p>
                 <div>
-
-
                     <label for="facebook"><strong><?php _e("Facebook", "viradacultural"); ?></strong></label><br/>
                     <input type="text" id="facebook" class="text" name="theme_options[social_networks][facebook]" value="<?php echo htmlspecialchars($options['social_networks']['facebook']); ?>" style="width: 80%"/>
                     <br/><br/>
@@ -111,7 +109,21 @@ function theme_options_page_callback_function() {
                     <label for="instagram"><strong><?php _e("Instagram", "viradacultural"); ?></strong></label><br/>
                     <input type="text" id="instagram" class="text" name="theme_options[social_networks][instagram]" value="<?php echo htmlspecialchars($options['social_networks']['instagram']); ?>" style="width: 80%"/>
                     <br/><br/>
+                </div>
 
+                <h3>Integrações</h3>
+                <div>
+                    <label for="facebook_app_id"><strong><?php _e("Facebook AppID", "viradacultural"); ?></strong></label><br/>
+                    <input type="text" id="facebook_app_id" class="text" name="theme_options[integrations][facebook_app_id]" value="<?php echo htmlspecialchars($options['integrations']['facebook_app_id']); ?>" style="width: 80%"/>
+                    <br/>
+                    <sup>* Necessário para funcionar o recurso <b>Minha Virada</b>.</sup>
+                    <br/><br/>
+
+                    <label for="minhavirada_api_url"><strong><?php _e("URL da API da Minha Virada", "viradacultural"); ?></strong></label><br/>
+                    <input type="text" id="minhavirada_api_url" class="text" name="theme_options[integrations][minhavirada_api_url]" value="<?php echo htmlspecialchars($options['integrations']['minhavirada_api_url']); ?>" style="width: 80%"/>
+                    <br/>
+                    <sup>* Necessário para funcionar o recurso <b>Minha Virada</b>.</sup>
+                    <br/><br/>
                 </div>
 
                 <h3>Hashtag</h3>

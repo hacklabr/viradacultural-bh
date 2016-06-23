@@ -1,6 +1,11 @@
+console.log('fabio', GlobalConfiguration);
+
 minhaVirada = {
-    baseApiUrl: 'http://api.viradaculturalbh.com.br/api/minhavirada/',
+    // baseApiUrl: 'http://api.viradaculturalbh.com.br/api/',
 //    baseApiUrl: 'http://192.168.0.70:8000/',
+    baseApiUrl: (window.GlobalConfiguration && GlobalConfiguration.minhaviradaApiUrl
+        ? GlobalConfiguration.minhaviradaApiUrl
+        : 'http://192.168.0.70:8000/'),
 
     uid: false,
     accessToken: false,

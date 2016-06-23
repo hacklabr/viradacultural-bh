@@ -42,11 +42,25 @@ function remove_admin_bar(){
 add_filter( 'show_admin_bar' , 'remove_admin_bar');
 
 function virada_get_facebook_app_id() {
-    if(defined('FACEBOOK_APP_ID')){
+    $options = get_option('theme_options', true);
+
+    if($options && isset($options['integrations']) && isset($options['integrations']['facebook_app_id'])) {
+        return $options['integrations']['facebook_app_id'];
+    }else if(defined('FACEBOOK_APP_ID')){
         return FACEBOOK_APP_ID;
     }else{
         return '364818143726863';
     }
+}
+
+function virada_get_api_url() {
+    $options = get_option('theme_options', true);
+
+    if($options && isset($options['integrations']) && isset($options['integrations']['minhavirada_api_url'])) {
+        return $options['integrations']['minhavirada_api_url'];
+    }
+
+    return null;
 }
 
 // JS
@@ -59,6 +73,7 @@ function viradacultural_addJS() {
     wp_enqueue_script('bootstrap', get_stylesheet_directory_uri().'/js/bootstrap.js', 'jquery');
 
     $facebookAppId = virada_get_facebook_app_id();
+    $minhaviradaApiUrl = virada_get_api_url();
 
     $evt_file = realpath(__DIR__.'/app/events.json');
     $spc_file = realpath(__DIR__.'/app/spaces.json');
@@ -70,11 +85,14 @@ function viradacultural_addJS() {
         'pdfURL' =>         get_theme_option('pdf-programacao'),
         'ajaxurl' =>        admin_url('admin-ajax.php'),
         'facebookAppId' =>  $facebookAppId,
+        'minhaviradaApiUrl' => $minhaviradaApiUrl,
+
         'md5' => array(
             'events' => $evt_file ? md5_file($evt_file) : '',
             'spaces' => $spc_file ? md5_file($spc_file) : '',
             'spaces-order' => $ord_file ? md5_file($ord_file) : '',
         ),
+
         'startDate' => '2016-07-09',
         'startTime' => '17:00',
         'startDateTime' => '2016-07-09 18:00',
