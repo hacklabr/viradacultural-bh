@@ -1,5 +1,3 @@
-console.log('fabio', GlobalConfiguration);
-
 minhaVirada = {
     // baseApiUrl: 'http://api.viradaculturalbh.com.br/api/',
 //    baseApiUrl: 'http://192.168.0.70:8000/',
