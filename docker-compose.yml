@@ -4,8 +4,6 @@ web:
    - ./src/:/var/www/html/
    - ./src/_htaccess:/var/www/html/.htaccess
    - ./db/jsons/:/var/www/jsons/
-  environment:
-   - WORDPRESS_WP_DEBUG=true
   links:
    - db:mysql
   ports:
