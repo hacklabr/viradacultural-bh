@@ -368,7 +368,7 @@ app.controller('programacao', function($scope, $rootScope, $http, $location, $ti
         },
         time:{
             min: '19:00',
-            max: '17:59'
+            max: '18:59'
         }
     };
 
@@ -558,11 +558,11 @@ app.controller('programacao', function($scope, $rootScope, $http, $location, $ti
 
     function getTime(time, startsOn){
         var t = parseInt(time.replace(':', ''));
-        if(t === 1800 && startsOn && startsOn == GlobalConfiguration.endTime){
-            t = 1759;
+        if(t === 1900 && startsOn && startsOn == GlobalConfiguration.endTime){
+            t = 1859;
         }
 
-        if(t < 1800)
+        if(t < 1900)
             return t + 20000;
         else
             return t + 10000;
