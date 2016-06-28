@@ -188,6 +188,13 @@
                     <a id="grid-view" ng-class='{"active": data.viewMode === "grid"}' ng-click="data.viewMode = 'grid'" analytics-on="click" analytics-event="Modo Grade clicado" analytics-category="Commands"><div class="icon icon_grid-2x2"></div></a>
                     <a id="list-view" ng-class='{"active": data.viewMode === "list"}' ng-click="data.viewMode = 'list'" analytics-on="click" analytics-event="Modo Lista clicado" analytics-category="Commands"><div class="icon icon_menu-square_alt"></div></a>
                 </div>
+
+                <input type="checkbox" id="id-programacao-fechar-alerta">
+                <div class="clear programacao-alerta visible-lg visible-md">
+                    <small>Sujeito a alterações</small>
+                    <label class="glyphicon glyphicon-remove programacao-fechar-alerta"
+                           for="id-programacao-fechar-alerta" aria-hidden="true"></label>
+                </div>
             </div>
             <!-- .row -->
         </div>

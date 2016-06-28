@@ -824,6 +824,37 @@ footer {
             margin: 0 0 12px;
         }
     }
+    .programacao-alerta {
+        margin-top: -24px;
+        padding-left: 15px;
+        margin-top: -6px;
+        padding-left: 15px;
+        background-color: #FF0000;
+        line-height: 22px;
+        color: white;
+        font-family: "Open Sans";
+        font-weight: bold;
+        position: relative;
+
+        small {
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .programacao-fechar-alerta {
+            float: right;
+            margin-top: 4px;
+            cursor: pointer;
+            color: white;
+        }
+    }
+    #id-programacao-fechar-alerta {
+        display: none;
+        
+        &:checked + .programacao-alerta {
+            display: none !important;
+        }
+    }
     h1 {
         margin: 20px 0;
         font-size: 24px;
@@ -1517,4 +1548,10 @@ footer {
 #smartbanner {
     margin-top: -80px;
     margin-bottom: 76px;
+}
+
+.clear {
+    float: left;
+    clear: both;
+    width: 100%;
 }
