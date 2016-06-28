@@ -350,8 +350,8 @@ app.controller('programacao', function($scope, $rootScope, $http, $location, $ti
             $scope.data.searchText = $location.$$hash;
     });
 
-    $scope.startsAt = '18:00';
-    $scope.endsAt = '18:00';
+    $scope.startsAt = '19:00';
+    $scope.endsAt = '19:00';
 
     $scope.filters = {
         'spaces': false
@@ -367,7 +367,7 @@ app.controller('programacao', function($scope, $rootScope, $http, $location, $ti
             max:96
         },
         time:{
-            min: '18:00',
+            min: '19:00',
             max: '17:59'
         }
     };
@@ -591,7 +591,7 @@ app.controller('programacao', function($scope, $rootScope, $http, $location, $ti
             var searchResultBySpaceId = {};
             var txt = $scope.unaccent($scope.data.searchText);
             var searchStartsAt = getTime($scope.startsAt);
-            var searchEndsAt = $scope.endsAt === '18:00' ? getTime('17:59') : getTime($scope.endsAt);
+            var searchEndsAt = $scope.endsAt === '19:00' ? getTime('18:59') : getTime($scope.endsAt);
 
             var events = [];
             var spaces = [];
@@ -751,8 +751,8 @@ app.controller('programacao', function($scope, $rootScope, $http, $location, $ti
             virtualPath += '/page-'+page;
 
             if($scope.data.searchText) virtualPath += '/text|'+$scope.data.searchText;
-            if($scope.startsAt != '18:00') virtualPath += '/starts|'+$scope.startsAt;
-            if($scope.endsAt != '18:00') virtualPath += '/ends|'+$scope.endsAt;
+            if($scope.startsAt != '19:00') virtualPath += '/starts|'+$scope.startsAt;
+            if($scope.endsAt != '19:00') virtualPath += '/ends|'+$scope.endsAt;
 
             $scope.pageTrack(virtualPath);
 
