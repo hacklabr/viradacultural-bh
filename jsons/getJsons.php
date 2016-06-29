@@ -83,10 +83,10 @@ if($event_ids){
         }
 
         $e->acessibilidade = array();
-        if($e->traducaoLibras)
+        if($e->traducaoLibras == 'Sim')
             $e->acessibilidade[] = 'Tradução para LIBRAS';
 
-        if($e->descricaoSonora)
+        if($e->descricaoSonora == 'Sim')
             $e->acessibilidade[] = 'Descrição sonora';
 
 
