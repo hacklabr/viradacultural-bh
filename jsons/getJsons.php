@@ -20,8 +20,8 @@ $project_ids = $mapas->getChildrenIds('project', PROJECT_ID, true);
 
 echo "\nbaixando eventos...";
 $events = $mapas->findEntities(
-        'event', 
-        'id,name,subTitle,shortDescription,description,classificacaoEtaria,terms,traducaoLibras,descricaoSonora,project.id,project.name,project.singleUrl', 
+        'event',
+        'id,name,subTitle,shortDescription,description,classificacaoEtaria,terms,traducaoLibras,descricaoSonora,project.id,project.name,project.singleUrl',
         [
             '@files' => '(avatar.viradaSmall,avatar.viradaBig):url',
             'project' => sdk\IN($project_ids),
@@ -52,16 +52,16 @@ if($event_ids){
                 '@order' => '_startsAt',
                 '@permissions' => 'view'
             ]);
-    
+
     $space_ids = [];
-    
+
     $count = 0;
     foreach ($occurrences as $occ) {
         $rule = $occ->rule;
         $e = clone $events_by_id[$occ->eventId];
         $e->id = $occ->id;
         $e->eventId =  $occ->eventId;
-        
+
         if(!in_array($occ->space->id, $space_ids)){
             $space_ids[] = $occ->space->id;
         }
@@ -107,12 +107,12 @@ if($event_ids){
 
         $result_events[] = $e;
     }
-    
+
     if($space_ids){
         echo "\nbaixando espaços...";
         $spaces = $mapas->findEntities(
             'space',
-            'id,name,shortDescription,endereco,location', 
+            'id,name,shortDescription,endereco,location',
             [
                 '@files' => '(avatar.viradaSmall,avatar.viradaBig):url',
                 '@order' => 'name',
