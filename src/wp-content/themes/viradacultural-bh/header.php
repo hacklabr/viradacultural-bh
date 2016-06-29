@@ -16,9 +16,6 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <meta name="apple-itunes-app" content="app-id=999520281">
-        <meta name="google-play-app" content="app-id=br.com.lfdb.viradapp">
-
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?php
             /* Print the <title> tag based on what is being viewed. */
@@ -211,7 +208,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
                             <li class="col-sm-6 col-xs-6"><a class="minha-virada" href="<?php bloginfo( 'url' ); ?>/minha-virada/" title="Minha Virada"><span>Minha Virada</span></a></li>
 
                         <?php endif; ?>
-                        
+
                         <?php if(false): ?>
                             <li class="col-sm-6 col-xs-6"><a class="mapa" href="<?php bloginfo( 'url' ); ?>/mapa/" title="Mapa de Serviços"><i class="icon icon_map" style="font-size:15px; margin-left: -28px; margin-right: 13px;"></i><span>Mapa de Serviços</span></a></li>
                         <?php endif; ?>
