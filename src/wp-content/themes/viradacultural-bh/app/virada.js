@@ -42,7 +42,7 @@ app.directive('onFinishRender', function ($timeout) {
 
 app.controller('main', function($scope, $rootScope, $window, $sce, $analytics){
     $scope.conf = GlobalConfiguration;
-    $scope.current_share_url = document.URL.replace('##', '');
+    $scope.current_share_url = document.URL;
 
     $scope.eventTrack = function(label, options){
             $analytics.eventTrack(label, options);
