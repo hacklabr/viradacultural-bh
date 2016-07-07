@@ -153,7 +153,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
                         <li><a class="minha-virada" href="<?php bloginfo( 'url' ); ?>/minha-virada/" title="Minha Virada"><span>Minha Virada</span></a></li>
 
                     <?php endif; ?>
-                    <li><a class="mapa" href="<?php bloginfo( 'url' ); ?>/mapa/" title="Mapa de Serviços"><i class="icon icon_map"></i><span>Mapa de Serviços</span></a></li>
+                    <li><a class="mapa" href="<?php bloginfo( 'url' ); ?>/mapa/" title="Mapa de Serviços"><span>Mapa de Serviços</span></a></li>
                     <li><a class="imprensa" href="<?php bloginfo( 'url' ); ?>/contato/" title="Contato"><span>Contato</span></a></li>
                     <li class="whitespace"><span></span></li>
                 </ul>
@@ -206,7 +206,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
                             <li class="col-sm-6 col-xs-6"><a class="minha-virada" href="<?php bloginfo( 'url' ); ?>/minha-virada/" title="Minha Virada"><span>Minha Virada</span></a></li>
 
                         <?php endif; ?>
-                        <li class="col-sm-6 col-xs-6"><a class="mapa" href="<?php bloginfo( 'url' ); ?>/mapa/" title="Mapa de Serviços"><i class="icon icon_map" style="font-size:15px; margin-left: -28px; margin-right: 13px;"></i><span>Mapa de Serviços</span></a></li>
+                        <li class="col-sm-6 col-xs-6"><a class="mapa" href="<?php bloginfo( 'url' ); ?>/mapa/" title="Mapa de Serviços"><span>Mapa de Serviços</span></a></li>
                         <li class="col-sm-6 col-xs-6"><a class="imprensa" href="<?php bloginfo( 'url' ); ?>/contato/" title="Contato"><span>Contato</span></a></li>
 
                     </ul>

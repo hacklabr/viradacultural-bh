@@ -28,10 +28,6 @@
   .transition(width linear .3s);
   background-color: @brand-accent;
 
-  .mapa i.icon_map {
-      font-size: 15px; margin-left: -38px; margin-right: 23px;
-  }
-
   &.minified {
       .mapa i.icon_map {
             margin-left: -28px;
@@ -206,6 +202,13 @@
     background-size: 20px 20px;
     &:hover {
       background-image: url("img/minha-virada-icon-active.svg");
+    }
+  }
+  .mapa {
+    background-image: url("img/map-icon.svg");
+    background-size: 17px 17px;
+    &:hover {
+      background-image: url("img/map-icon-active.svg");
     }
   }
 }
